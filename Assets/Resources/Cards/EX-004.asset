@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: EX-004
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: EX-004
+  cardName: Filter
+  category: {fileID: 3275148326192089212, guid: 2d833bb9d2deb0e4f9d6d33288b6485a, type: 3}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: -1
+  possessionTime: 40
+  workScale: 0
+  powerConsumption: 1
+  recipe: P-007-D:1|R-002:5+TW-003:5+TW-004:10+PI-002:3
+  cardSlot: YesBox
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: YesBox
+  outputMaterial: YesBox
+  gathering: 0
+  outputPercent: 50

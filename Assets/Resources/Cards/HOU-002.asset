@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: HOU-002
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: HOU-002
+  cardName: Mid_Building
+  category: {fileID: 6358124152857696201, guid: 5e9fae9eacd94ad48a1827e67cd11db7, type: 3}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: -1
+  possessionTime: 50
+  workScale: 0
+  powerConsumption: 1
+  recipe: HOU-001:2+R-002:6+P-007-D:2
+  cardSlot: YesBox
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: YesBox
+  outputMaterial: YesBox
+  gathering: 0
+  outputPercent: 90

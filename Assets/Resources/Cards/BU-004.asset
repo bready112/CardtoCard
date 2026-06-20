@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: BU-004
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: BU-004
+  cardName: Acorn_Numbered
+  category: {fileID: 0}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: -1
+  possessionTime: 10
+  workScale: -1
+  powerConsumption: 1
+  recipe: FR-001:6+TW-004:1+BU-001:1
+  cardSlot: -1
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: -1
+  outputMaterial: -1
+  gathering: -1
+  outputPercent: -1

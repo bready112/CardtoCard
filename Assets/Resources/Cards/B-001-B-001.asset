@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: B-001-B-001
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: B-001-B-001
+  cardName: BerryBush
+  category: {fileID: 2351978265055609101, guid: bd3f91d53e5bd584991f01178afa58db, type: 3}
+  hp: 12
+  isPermanence: 0
+  beTrash: 0
+  trashPower: 0
+  possessionTime: 70
+  workScale: 0
+  powerConsumption: 0
+  recipe: FA-001-A:1+B-001:1
+  cardSlot: '"P-001-A|B-001'
+  yesBox: P-***|B-00170+TW-00130"
+  isConsumable: 1
+  isTransitive: 0
+  inputMaterial: 0
+  outputMaterial: -1
+  gathering: -1
+  outputPercent: -1

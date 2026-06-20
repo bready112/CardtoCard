@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: C-002
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: C-002
+  cardName: Shop
+  category: {fileID: 0}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: 5
+  possessionTime: 40
+  workScale: 0
+  powerConsumption: 1
+  recipe: TW-004:8+TW-003:2+ST-001:2+AIN-005:1+WA-002:1+P-007-D:1
+  cardSlot: 
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: YesBox
+  outputMaterial: '"C-003'
+  gathering: 0
+  outputPercent: C-005"

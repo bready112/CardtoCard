@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: FAC-005-W
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: FAC-005-W
+  cardName: Windmill
+  category: {fileID: 8148804506530375452, guid: e4a067cc5d050394db9a3045b43e776e, type: 3}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: 0
+  possessionTime: 120
+  workScale: 0
+  powerConsumption: 1
+  recipe: P-007-D:1|TW-004:6+TW-003:9+ST-001:24
+  cardSlot: W-003
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: '"W-002'
+  outputMaterial: WA-002"
+  gathering: 0
+  outputPercent: -1

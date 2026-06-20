@@ -1,0 +1,516 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\timecode\\cardcomponentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\timecode\\cardcomponentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\spawncard\\debugcardspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\spawncard\\debugcardspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\cardmoving\\carddraghandlerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cardmoving\\carddraghandlerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\slotslot\\wireclickblocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\slotslot\\wireclickblocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\pi-002card\\ropecarddraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pi-002card\\ropecarddraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\cardmoving\\normalcarddraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cardmoving\\normalcarddraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\pi-002card\\wirepincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pi-002card\\wirepincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\pi-002card\\ropelinenetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pi-002card\\ropelinenetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\pi-002card\\temendpintracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pi-002card\\temendpintracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\slotslot\\wireslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\slotslot\\wireslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\spawncard\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\spawncard\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\spawncard\\cardoutputspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\spawncard\\cardoutputspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\spawncard\\cardspawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\spawncard\\cardspawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\layer\\playspacearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\layer\\playspacearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\game\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\game\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74E0D3A7-19C5-40BE-F11E-E5A32DC37A5D}|Assembly-CSharp-Editor.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\editor\\csvtoscriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74E0D3A7-19C5-40BE-F11E-E5A32DC37A5D}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\csvtoscriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\cardoutcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cardoutcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\cardoffcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cardoffcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\ReadSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\ReadSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RopeLineController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\RopeLineController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\mainscene\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainscene\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardZoneTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\CardZoneTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\WirePinClickDetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\WirePinClickDetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardCheatKey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\CardCheatKey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RewardCalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\RewardCalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardSpawnTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\CardSpawnTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\CameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\binaban\\documents\\aaa\\projectgame\\my project\\assets\\script\\boxcard\\cardboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\boxcard\\cardboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DebugCardSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\DebugCardSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SpawnCard\\DebugCardSpawner.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\DebugCardSpawner.cs",
+              "RelativeToolTip": "Assets\\Script\\SpawnCard\\DebugCardSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T08:52:55.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RopeCardDragHandler.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\RopeCardDragHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PI-002card\\RopeCardDragHandler.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\RopeCardDragHandler.cs",
+              "RelativeToolTip": "Assets\\Script\\PI-002card\\RopeCardDragHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T13:53:02.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardDragHandlerBase.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Cardmoving\\CardDragHandlerBase.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Cardmoving\\CardDragHandlerBase.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Cardmoving\\CardDragHandlerBase.cs",
+              "RelativeToolTip": "Assets\\Script\\Cardmoving\\CardDragHandlerBase.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T13:50:32.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CardComponentManager.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Timecode\\CardComponentManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Timecode\\CardComponentManager.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Timecode\\CardComponentManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Timecode\\CardComponentManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T06:50:58.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WireClickBlocker.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SlotSlot\\WireClickBlocker.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SlotSlot\\WireClickBlocker.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SlotSlot\\WireClickBlocker.cs",
+              "RelativeToolTip": "Assets\\Script\\SlotSlot\\WireClickBlocker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T03:50:52.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NormalCardDragHandler.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Cardmoving\\NormalCardDragHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Cardmoving\\NormalCardDragHandler.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Cardmoving\\NormalCardDragHandler.cs",
+              "RelativeToolTip": "Assets\\Script\\Cardmoving\\NormalCardDragHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwCsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:05:31.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WirePinController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\WirePinController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PI-002card\\WirePinController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\WirePinController.cs",
+              "RelativeToolTip": "Assets\\Script\\PI-002card\\WirePinController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAiwFwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:54:40.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RopeLineNetController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\RopeLineNetController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PI-002card\\RopeLineNetController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\RopeLineNetController.cs",
+              "RelativeToolTip": "Assets\\Script\\PI-002card\\RopeLineNetController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwHgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:54:34.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TemEndPinTracker.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\TemEndPinTracker.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PI-002card\\TemEndPinTracker.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\PI-002card\\TemEndPinTracker.cs",
+              "RelativeToolTip": "Assets\\Script\\PI-002card\\TemEndPinTracker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:49:58.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WireSlot.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SlotSlot\\WireSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SlotSlot\\WireSlot.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SlotSlot\\WireSlot.cs",
+              "RelativeToolTip": "Assets\\Script\\SlotSlot\\WireSlot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:11:31.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CardController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SpawnCard\\CardController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardController.cs",
+              "RelativeToolTip": "Assets\\Script\\SpawnCard\\CardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T06:50:51.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CardOutputSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardOutputSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SpawnCard\\CardOutputSpawner.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardOutputSpawner.cs",
+              "RelativeToolTip": "Assets\\Script\\SpawnCard\\CardOutputSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:44:19.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CardSpawnManager.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardSpawnManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SpawnCard\\CardSpawnManager.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\SpawnCard\\CardSpawnManager.cs",
+              "RelativeToolTip": "Assets\\Script\\SpawnCard\\CardSpawnManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:16:51.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlaySpaceArea.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Layer\\PlaySpaceArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Layer\\PlaySpaceArea.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Layer\\PlaySpaceArea.cs",
+              "RelativeToolTip": "Assets\\Script\\Layer\\PlaySpaceArea.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T00:04:40.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CardBoxContainer.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\BoxCard\\CardBoxContainer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BoxCard\\CardBoxContainer.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\BoxCard\\CardBoxContainer.cs",
+              "RelativeToolTip": "Assets\\Script\\BoxCard\\CardBoxContainer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwEYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T13:06:50.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CsvToScriptableObject.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Editor\\CsvToScriptableObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\CsvToScriptableObject.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Editor\\CsvToScriptableObject.cs",
+              "RelativeToolTip": "Assets\\Editor\\CsvToScriptableObject.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwCMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T13:32:07.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EventSystem.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\EventSystem.cs",
+              "ViewState": "AgIAAOgBAAAAAAAAAAAqwAICAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T11:11:34.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CardOffCard.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardOffCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardOffCard.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardOffCard.cs",
+              "RelativeToolTip": "Assets\\Script\\CardOffCard.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwC0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T08:45:27.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CardOutCard.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardOutCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardOutCard.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardOutCard.cs",
+              "RelativeToolTip": "Assets\\Script\\CardOutCard.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAiwHIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T16:45:10.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Game\\UI\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Game\\UI\\CameraController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\Game\\UI\\CameraController.cs",
+              "RelativeToolTip": "Assets\\Script\\Game\\UI\\CameraController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:59:15.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CardData.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardData.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardData.cs",
+              "RelativeToolTip": "Assets\\Script\\CardData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T13:30:37.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ReadSlot.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\ReadSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ReadSlot.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\ReadSlot.cs",
+              "RelativeToolTip": "Assets\\Script\\ReadSlot.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T09:15:11.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Physics2DRaycaster.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1f2d1ab0d950\\Runtime\\UGUI\\EventSystem\\Raycasters\\Physics2DRaycaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T15:51:51.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WirePinClickDetector.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\WirePinClickDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\WirePinClickDetector.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\WirePinClickDetector.cs",
+              "RelativeToolTip": "Assets\\Script\\WirePinClickDetector.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwEsAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T07:22:57.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RopeLineController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RopeLineController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\RopeLineController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RopeLineController.cs",
+              "RelativeToolTip": "Assets\\Script\\RopeLineController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T04:37:50.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MainMenuController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\mainscene\\MainMenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\mainscene\\MainMenuController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\mainscene\\MainMenuController.cs",
+              "RelativeToolTip": "Assets\\Script\\mainscene\\MainMenuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T10:53:41.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CardCheatKey.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardCheatKey.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardCheatKey.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardCheatKey.cs",
+              "RelativeToolTip": "Assets\\Script\\CardCheatKey.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T18:36:43.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RewardCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RewardCalculator.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\RewardCalculator.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\RewardCalculator.cs",
+              "RelativeToolTip": "Assets\\Script\\RewardCalculator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T04:55:34.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CardSpawnTester.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardSpawnTester.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardSpawnTester.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardSpawnTester.cs",
+              "RelativeToolTip": "Assets\\Script\\CardSpawnTester.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T18:09:28.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CardZoneTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardZoneTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CardZoneTrigger.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CardZoneTrigger.cs",
+              "RelativeToolTip": "Assets\\Script\\CardZoneTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T06:51:23.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraController.cs",
+              "ToolTip": "C:\\Users\\binaban\\Documents\\AAA\\projectgame\\My project\\Assets\\Script\\CameraController.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T21:54:44.677Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

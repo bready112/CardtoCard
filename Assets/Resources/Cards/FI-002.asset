@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: FI-002
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: FI-002
+  cardName: Coarse_Oven
+  category: {fileID: 2351978265055609101, guid: bd3f91d53e5bd584991f01178afa58db, type: 3}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: 1
+  possessionTime: 20
+  workScale: 60
+  powerConsumption: 0
+  recipe: P-X:1|W-003:1+WA-002:1+ST-001:5+FI-001:1
+  cardSlot: -1
+  yesBox: 1
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: -1
+  outputMaterial: -1
+  gathering: -1
+  outputPercent: 40

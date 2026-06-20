@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942a7be238e96b4a91a677871eb10ea, type: 3}
+  m_Name: BU-002
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: BU-002
+  cardName: Broken_Squirrel_House
+  category: {fileID: 4196222025895889983, guid: 020e8e700ec6a7d458055ea96e7533ff, type: 3}
+  hp: -1
+  isPermanence: 0
+  beTrash: 0
+  trashPower: -1
+  possessionTime: -1
+  workScale: 0
+  powerConsumption: 1
+  recipe: BU-001+600sec
+  cardSlot: -1
+  yesBox: 0
+  isConsumable: 0
+  isTransitive: 0
+  inputMaterial: -1
+  outputMaterial: -1
+  gathering: -1
+  outputPercent: 30
