@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: C-001
   cardName: Box
-  category: {fileID: 3729196899171292715, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+  category: {fileID: 3619703533987427819, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

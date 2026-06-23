@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: PI-002
   cardName: Clothesline
-  category: {fileID: 4246692176838804581, guid: 10837f0bc7b1601489f5b71de43fa345, type: 3}
+  category: {fileID: 3806693254195394915, guid: 10837f0bc7b1601489f5b71de43fa345, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

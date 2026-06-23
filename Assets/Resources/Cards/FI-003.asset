@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FI-003
   cardName: Stone_Oven
-  category: {fileID: 5232768913431781780, guid: cbe3338077d9ec241b485cd90a45585a, type: 3}
+  category: {fileID: 3556889145079061316, guid: cbe3338077d9ec241b485cd90a45585a, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

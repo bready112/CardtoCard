@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FI-004
   cardName: Big_Oven
-  category: {fileID: 1656785111913390151, guid: f821ef253add31a43af324462697e9c3, type: 3}
+  category: {fileID: 4466573683626930140, guid: f821ef253add31a43af324462697e9c3, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

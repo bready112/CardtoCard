@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: EX-002
   cardName: DoughTable
-  category: {fileID: 5357638887235812646, guid: 6d0aa580645797a479a13991ea58f9fa, type: 3}
+  category: {fileID: 6173167458771983961, guid: 6d0aa580645797a479a13991ea58f9fa, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

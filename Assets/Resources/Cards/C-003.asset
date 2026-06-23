@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: C-003
   cardName: Butter
-  category: {fileID: 2351978265055609101, guid: bd3f91d53e5bd584991f01178afa58db, type: 3}
+  category: {fileID: 4349557730107253491, guid: bd3f91d53e5bd584991f01178afa58db, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 1

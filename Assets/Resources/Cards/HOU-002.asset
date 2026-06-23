@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: HOU-002
   cardName: Mid_Building
-  category: {fileID: 6358124152857696201, guid: 5e9fae9eacd94ad48a1827e67cd11db7, type: 3}
+  category: {fileID: 6020979594975539694, guid: 5e9fae9eacd94ad48a1827e67cd11db7, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

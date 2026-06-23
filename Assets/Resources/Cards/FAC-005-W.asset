@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FAC-005-W
   cardName: Windmill
-  category: {fileID: 8148804506530375452, guid: e4a067cc5d050394db9a3045b43e776e, type: 3}
+  category: {fileID: 2026666490480706766, guid: e4a067cc5d050394db9a3045b43e776e, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

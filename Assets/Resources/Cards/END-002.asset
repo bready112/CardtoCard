@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: END-002
   cardName: Giant_Cake
-  category: {fileID: 2549107412952435847, guid: 6dfc52f4aa9372a4bb70be429f584d13, type: 3}
+  category: {fileID: 6835153629917332510, guid: 6dfc52f4aa9372a4bb70be429f584d13, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

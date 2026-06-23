@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: EX-003
   cardName: Counter
-  category: {fileID: 6126561761442335824, guid: 5a138be7c18685e49b6ea69bfb57040c, type: 3}
+  category: {fileID: 1442265279139509336, guid: 5a138be7c18685e49b6ea69bfb57040c, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

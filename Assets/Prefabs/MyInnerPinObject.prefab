@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3903188842802582869}
   - component: {fileID: 5068420453853700297}
   m_Layer: 0
-  m_Name: PI-001Prefab
+  m_Name: PI-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: HOU-003
   cardName: Big_Building
-  category: {fileID: 4552334484758565889, guid: 45bf3c36b17ced843baba6f2a5b0b81d, type: 3}
+  category: {fileID: 2864118361246911161, guid: 45bf3c36b17ced843baba6f2a5b0b81d, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

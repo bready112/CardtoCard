@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FA-004
   cardName: Barn
-  category: {fileID: 7978639524809739901, guid: 96480d1247adfec448dcaab8703baa7d, type: 3}
+  category: {fileID: 1409379733874567545, guid: 96480d1247adfec448dcaab8703baa7d, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

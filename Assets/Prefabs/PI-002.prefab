@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7429301267869289213}
   - component: {fileID: 1354329411316187204}
   - component: {fileID: 4486309534013807124}
+  - component: {fileID: 7052039297873334588}
   m_Layer: 7
   m_Name: PI-002
   m_TagString: Card
@@ -270,6 +271,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardDragHandler
   dragScaleMultiplier: 1.15
+  canvasScaleMultiplier: 1.15
+--- !u!114 &7052039297873334588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604387473821051010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69103c3be366c034a883182fb1b4b30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardPI002
+  endPinPrefab: {fileID: 6455244261471211135, guid: 9614fe99d7740ab4f846821248b88f08, type: 3}
+  startPinPrefab: {fileID: 1186824259732955291, guid: e0990f6d80ebcf34bb44131955f144dd, type: 3}
+  wireLinePrefab: {fileID: 3347564717727503123, guid: 917682d22974ffa4ab41b667911d4c60, type: 3}
+  targetPinName: PI-001
+  snapRange: 5
 --- !u!1 &3806693254195394915
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +301,7 @@ GameObject:
   - component: {fileID: 6011175519386152294}
   - component: {fileID: 3304229732415929117}
   - component: {fileID: 7812138955969312779}
+  - component: {fileID: 2478352506998389347}
   m_Layer: 5
   m_Name: PI-002
   m_TagString: TheCard
@@ -306,9 +326,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -98, y: 1671}
+  m_AnchoredPosition: {x: -48, y: 1731}
   m_SizeDelta: {x: 100, y: 120}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6011175519386152294
 Canvas:
   m_ObjectHideFlags: 0
@@ -373,3 +393,16 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2478352506998389347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806693254195394915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bf06185bac8f848bbcc2375875d659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardController
+  cardData: {fileID: 11400000, guid: 44c161d85d941024aa6ad5aae82d40a5, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FAC-001-T
   cardName: Sawmill
-  category: {fileID: 8148804506530375452, guid: 7cb8ba05962470849bef4642ac473337, type: 3}
+  category: {fileID: 6083812944980035945, guid: 7cb8ba05962470849bef4642ac473337, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 1

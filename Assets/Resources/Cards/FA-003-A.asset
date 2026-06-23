@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FA-003-A
   cardName: Greenhouse
-  category: {fileID: 4070593232673046586, guid: 0c6cc39912374ab46a77ba0ed6c0ea9a, type: 3}
+  category: {fileID: 7335394086876439261, guid: 0c6cc39912374ab46a77ba0ed6c0ea9a, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

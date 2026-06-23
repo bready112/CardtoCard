@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: WA-001
   cardName: Well
-  category: {fileID: 3918585345121640005, guid: b81f1eedbc08da8408bb84057fd2d49f, type: 3}
+  category: {fileID: 5703285448216689992, guid: b81f1eedbc08da8408bb84057fd2d49f, type: 3}
   hp: 5
   isPermanence: 0
   beTrash: 0

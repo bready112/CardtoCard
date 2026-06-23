@@ -20,9 +20,9 @@ TagManager:
   - UI
   - Ground
   - Cards
-  - 
-  - 
-  - 
+  - Slot
+  - Wire
+  - Pin
   - 
   - 
   - 
@@ -31,7 +31,7 @@ TagManager:
   - Text
   - 
   - 
-  - 
+  - Click
   - 
   - 
   - 

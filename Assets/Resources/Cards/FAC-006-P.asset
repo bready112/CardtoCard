@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FAC-006-P
   cardName: Dining
-  category: {fileID: 3836508700679537138, guid: b3a6d0a7adf4f434e91cdab314735e9b, type: 3}
+  category: {fileID: 1685940884714594609, guid: b3a6d0a7adf4f434e91cdab314735e9b, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

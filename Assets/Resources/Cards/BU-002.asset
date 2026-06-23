@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: BU-002
   cardName: Broken_Squirrel_House
-  category: {fileID: 4196222025895889983, guid: 020e8e700ec6a7d458055ea96e7533ff, type: 3}
+  category: {fileID: 8062300346669257196, guid: 020e8e700ec6a7d458055ea96e7533ff, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

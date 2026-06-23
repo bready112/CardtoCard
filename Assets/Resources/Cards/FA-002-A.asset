@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: FA-002-A
   cardName: Field
-  category: {fileID: 4070593232673046586, guid: 286c8debf05b807428492a138d347390, type: 3}
+  category: {fileID: 1888781697606884222, guid: 286c8debf05b807428492a138d347390, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0

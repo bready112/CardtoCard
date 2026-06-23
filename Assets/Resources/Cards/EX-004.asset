@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: EX-004
   cardName: Filter
-  category: {fileID: 3275148326192089212, guid: 2d833bb9d2deb0e4f9d6d33288b6485a, type: 3}
+  category: {fileID: 7212402126286643955, guid: 2d833bb9d2deb0e4f9d6d33288b6485a, type: 3}
   hp: -1
   isPermanence: 0
   beTrash: 0
