@@ -48,12 +48,20 @@ public class WireSlot : MonoBehaviour
 
     public string GetMyParentCardName() { return _myParentCardName; }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
+        // 이미 선이 꼽혀있지 않은 깨끗한 슬롯일 때만 반응합니다.
         if (!isOccupied)
         {
+            // 현재 화면에 돌아다니고 있는 가상핀(EndPin)을 수색합니다.
             EndPin trackingEndPin = FindFirstObjectByType<EndPin>();
-            if (trackingEndPin != null) trackingEndPin.ProcessClickConnectionWithTarget(this);
+
+            if (trackingEndPin != null)
+            {
+                // 가상핀이 존재한다면, 이 슬롯을 목적지로 삼아 최종 배선 완공을 명령합니다!
+                trackingEndPin.ProcessClickConnectionWithTarget(this);
+                Debug.Log($"🔌 [WireSlot] {gameObject.name} 슬롯 위에서 마우스 업! 완공 프로세스를 호출합니다.");
+            }
         }
     }
 
@@ -79,9 +87,6 @@ public class WireSlot : MonoBehaviour
 
             _currentActivePinVisual.SetActive(true);
 
-            // ====================================================================
-            // 🎯 [연결 고리 주입] 켜지는 자식 핀에게 선 사령탑(Tracker) 주소를 다이렉트로 박아줍니다!
-            // ====================================================================
             WirePinClicker pinClicker = _currentActivePinVisual.GetComponent<WirePinClicker>();
             RealWireTracker trackerScript = wireInstance.GetComponent<RealWireTracker>();
             if (pinClicker != null && trackerScript != null)
@@ -91,12 +96,6 @@ public class WireSlot : MonoBehaviour
         }
     }
 
-    // ❌ Update() 및 PassPinClickToWire() 등 신호를 쏘거나 토스하는 구역은 완전히 삭제되었습니다!
-    // 슬롯은 절대로 신호를 먼저 보내지 않습니다.
-
-    /// <summary>
-    /// 📱 수신 전용 구역: 오직 선 사령탑의 명령을 '받기만' 하여 데이터를 리셋하고 핀을 숨깁니다.
-    /// </summary>
     public void ResetSlotData()
     {
         isOccupied = false;
@@ -112,8 +111,20 @@ public class WireSlot : MonoBehaviour
             _currentActivePinVisual = null;
         }
 
+        // ====================================================================
+        // 📡 [수신기 해제 신호 송신 - 보정 완료] 안전한 부모 카드 수색 구조
+        // ====================================================================
+        CardPhysicsReceiver myReceiver = (_myParentCard != null)
+            ? _myParentCard.GetComponent<CardPhysicsReceiver>()
+            : GetComponentInParent<CardPhysicsReceiver>();
+
+        if (myReceiver != null)
+        {
+            myReceiver.DeactivatePhysicsChain();
+        }
+        // ====================================================================
+
         enabled = true;
-        Debug.Log($"🎨 [슬롯 수신 세척완료] {gameObject.name} 슬롯이 선의 자해 명령을 받아 완벽하게 청소되었습니다.");
     }
 
     public void LinkMasterCardCanvas(GameObject canvasObj) { _masterCardCanvas = canvasObj; }

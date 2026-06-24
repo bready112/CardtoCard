@@ -19,7 +19,6 @@ public class CardSnapToSlot : MonoBehaviour
 
     private CardDragHandler _dragHandler;
 
-    // 🎯 [핵심 주권 변수] 내 카드가 내려앉은 출발지 슬롯 정보를 기억합니다.
     private WireSlot _myOriginSlot;
     private string _actualCardID;
     private GameObject _myCanvasObject;
@@ -31,17 +30,19 @@ public class CardSnapToSlot : MonoBehaviour
 
     private void OnMouseUp()
     {
+        // 💥 Z축 기본 평면(0f) 기준으로 마우스 월드 좌표 계산 (카메라 기본 거리 10f 적용)
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.InputSystem.Mouse.current.position.ReadValue().x, UnityEngine.InputSystem.Mouse.current.position.ReadValue().y, 10f));
-        mouseWorldPos.z = 0f;
+        mouseWorldPos.z = 0f; // 완전 평면화
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(mouseWorldPos, Vector2.zero);
+        // 원형 그물망 탐지 가동
+        Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(mouseWorldPos, 0.5f);
         WireSlot targetSlot = null;
 
-        foreach (var hit in hits)
+        foreach (Collider2D col in overlappedColliders)
         {
-            if (hit.collider != null && hit.collider.CompareTag("WirePin"))
+            if (col != null && col.CompareTag("WirePin"))
             {
-                WireSlot slotScript = hit.collider.GetComponent<WireSlot>();
+                WireSlot slotScript = col.GetComponent<WireSlot>();
                 if (slotScript != null && !slotScript.isOccupied)
                 {
                     targetSlot = slotScript;
@@ -67,41 +68,37 @@ public class CardSnapToSlot : MonoBehaviour
                     _actualCardID = myCanvas.name.Split('_')[0];
                 }
 
-                // 1. 출발지 슬롯 정보를 내 몸통에 확실히 붙잡아둡니다.
                 _myOriginSlot = targetSlot;
-
-                // 2. 출발지 슬롯에 내 카드 캔버스 연동 및 점유 표시
                 _myOriginSlot.LinkMasterCardCanvas(_myCanvasObject);
                 _myOriginSlot.isOccupied = true;
 
-                // 3. 고향 자리에 가상 고정 핀 생성
                 GameObject temBucket = GameObject.Find("Tem") ?? new GameObject("Tem");
                 if (startPinPrefab != null)
                 {
-                    GameObject sPinObj = Instantiate(startPinPrefab, _myOriginSlot.transform.position, Quaternion.identity);
+                    // 💥 Z축을 0f로 꼽아줍니다.
+                    Vector3 startPinPos = _myOriginSlot.transform.position;
+                    startPinPos.z = 0f;
+                    GameObject sPinObj = Instantiate(startPinPrefab, startPinPos, Quaternion.identity);
                     sPinObj.name = "Tracking_StartPin";
                     sPinObj.transform.SetParent(temBucket.transform, true);
                 }
 
-                // 4. 가상 마우스 핀(EndPin)을 소환합니다. (★주소 기억시키지 말고 순수하게 생성만!)
                 if (endPinPrefab != null)
                 {
-                    GameObject ePinObj = Instantiate(endPinPrefab, _myOriginSlot.transform.position, Quaternion.identity);
+                    // 💥 Z축을 0f로 꼽아줍니다.
+                    Vector3 endPinPos = _myOriginSlot.transform.position;
+                    endPinPos.z = 0f;
+                    GameObject ePinObj = Instantiate(endPinPrefab, endPinPos, Quaternion.identity);
                     ePinObj.transform.SetParent(temBucket.transform, true);
 
                     EndPin endPinScript = ePinObj.GetComponent<EndPin>();
                     if (endPinScript != null)
                     {
-                        // 🎯 핵심: 가상핀에게 주소를 주입하지 않고, 나 자신(CardSnapToSlot)을 리포터로 등록하여 연결만 해줍니다.
                         endPinScript.InitPureTracker(this);
                     }
                 }
 
-                // 5. 마우스 모드 제어
-                if (MouseController.Instance != null)
-                {
-                    MouseController.Instance.SetMouseMode(MouseController.MouseMode.SlotOnly);
-                }
+  
 
                 CardColliderReceiver receiver = GetComponentInChildren<CardColliderReceiver>();
                 if (receiver != null)
@@ -109,9 +106,8 @@ public class CardSnapToSlot : MonoBehaviour
                     receiver.SetColliderActive(false);
                 }
 
-                if (_dragHandler != null) _dragHandler.enabled = false;
+                
 
-                // 6. 카드는 화면에서 숨깁니다.
                 if (transform.parent != null && transform.parent.parent != null)
                 {
                     transform.parent.parent.gameObject.SetActive(false);
@@ -124,65 +120,77 @@ public class CardSnapToSlot : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 🎯 [사상 대통합 핵심 함수] 
-    /// 가상핀이 목적지 주소를 따와서 거꾸로 전해오면, 사령탑인 여기서 2개의 주소를 묶어 최종 선을 생성하고 전달합니다.
-    /// </summary>
     public bool ReportTargetSlotDiscovered(WireSlot finalTargetSlot)
     {
         if (_myOriginSlot == null || finalTargetSlot == null) return false;
 
-
-
-        // ====================================================================
-        // 🎯 [새로운 스크립트 협동] 배선 계약서 최종 사인 직전, 독립 검사기 가동!
-        // ====================================================================
         if (!WireConnectionValidator.IsConnectionValid(_myOriginSlot, finalTargetSlot))
         {
-            // 💥 [취소 안 한다!] 규칙에 맞지 않으면 강제 취소(ForceCancelRestore)를 호출하지 않고,
-            // 그냥 여기서 함수를 끝내버립니다. (가상핀과 가이드선이 파괴되지 않고 화면에 유지됨)
             return false;
         }
 
+        // ====================================================================
+        // 🧲 [완공 구역 안전장치]: 최종 조준된 슬롯 평면을 그물망 탐지로 재차 안전 검사합니다.
+        // 부모 카드가 완공 연출 순간 몸통 콜라이더로 덮어버려도 완전히 무시합니다.
+        // ====================================================================
+        Vector3 targetPos = finalTargetSlot.transform.position;
+        targetPos.z = 0f;
 
+        Collider2D[] safetyCheck = Physics2D.OverlapCircleAll(targetPos, 0.5f);
+        bool isSlotStillValid = false;
 
+        foreach (Collider2D col in safetyCheck)
+        {
+            if (col != null && col.gameObject == finalTargetSlot.gameObject)
+            {
+                isSlotStillValid = true;
+                break;
+            }
+        }
 
+        // 만약 비정상적인 프레임 꼬임으로 슬롯 인지가 풀렸더라도 강제 복원 판정을 먹입니다.
+        if (!isSlotStillValid)
+        {
+            Debug.LogWarning($"⚠️ [공사 보정] {finalTargetSlot.name}이 물리 몸통에 가려졌으나 그물망 연산으로 관통 수거했습니다.");
+        }
 
-        // 1. 최종 실물 전선 오브젝트 인스턴스화 (CardSnapToSlot이 주도하여 생성)
         GameObject lineGroupObj = GameObject.Find("All_Line") ?? new GameObject("All_Line");
+
+        // 💥 실물 전선 인스턴스도 Z = 0f 평면에 소환
         GameObject realWireInstance = Instantiate(wireLinePrefab, Vector3.zero, Quaternion.identity);
         realWireInstance.transform.SetParent(lineGroupObj.transform, false);
 
-        // 2. 선의 이름을 내 부모 카드(Canvas)의 명찰 주소로 낙인
         realWireInstance.name = _myCanvasObject.name;
 
-        // 3. 전선 추적기(RealWireTracker) 세팅 가동
         RealWireTracker wireTracker = realWireInstance.GetComponent<RealWireTracker>();
         if (wireTracker != null)
         {
             wireTracker.SetupTrackingSlots(_myOriginSlot.transform, finalTargetSlot.transform, _myCanvasObject.name);
         }
 
-        // 4. 부모.부모.자식 정밀 세부 주소 추출
         string originDetailPath = GetDetailedPath(_myOriginSlot.transform);
         string targetDetailPath = GetDetailedPath(finalTargetSlot.transform);
 
-        // 5. 취합 완료된 2개의 주소와 실물 선 정보를 양쪽 슬롯에 강력하게 주입!
         _myOriginSlot.ConnectWire(finalTargetSlot.transform.position, wireLinePrefab, targetDetailPath, finalTargetSlot, realWireInstance);
         finalTargetSlot.ConnectWire(_myOriginSlot.transform.position, wireLinePrefab, originDetailPath, _myOriginSlot, realWireInstance);
 
-        // 6. 연결이 완료되었으므로 주권 카드 원본 오브젝트 최종 파괴
+        // 확실하게 루트 계층에서 수신기를 탐색하여 고무줄 작동
+        CardPhysicsReceiver myReceiver = _myOriginSlot.transform.root.GetComponent<CardPhysicsReceiver>();
+        CardPhysicsReceiver targetReceiver = finalTargetSlot.transform.root.GetComponent<CardPhysicsReceiver>();
+
+        if (myReceiver != null && targetReceiver != null)
+        {
+            myReceiver.ActivatePhysicsChain(targetReceiver.GetRigidbody());
+            targetReceiver.ActivatePhysicsChain(myReceiver.GetRigidbody());
+        }
+
         Destroy(_myCanvasObject);
 
-        if (MouseController.Instance != null)
-        {
-            MouseController.Instance.SetMouseMode(MouseController.MouseMode.Normal);
-        }
 
         GameObject startPin = GameObject.Find("Tracking_StartPin");
         if (startPin != null) Destroy(startPin);
 
-        return true; // 합격 보고
+        return true;
     }
 
     private string GetDetailedPath(Transform trans)
@@ -194,20 +202,15 @@ public class CardSnapToSlot : MonoBehaviour
         return $"{p2}.{p1}.{me}";
     }
 
-    // 가상선 취소 시 카드 복구용 유틸리티
-    /// <summary>
-    /// 🎯 [규칙 1] 연결 도중 철거(취소): 클릭해서 취소한 바로 그 마우스 위치(현재 핀 위치)에 카드를 복구합니다.
-    /// </summary>
     public void ForceCancelRestore(Vector3 currentMousePinPos)
     {
         if (_myOriginSlot != null)
         {
-            // 출발지 슬롯 데이터는 깨끗하게 복구(수신 리셋)
             _myOriginSlot.RestoreMasterCard();
 
             if (_myCanvasObject != null)
             {
-                // 카드는 엉뚱한 곳이 아니라 유저가 '클릭해서 취소한 마우스 자리'에 나타납니다.
+                // 💥 카드 부활 시 Z축 원래대로 0f 안착
                 Vector3 spawnPos = currentMousePinPos;
                 spawnPos.z = 0f;
                 _myCanvasObject.transform.position = spawnPos;
@@ -220,7 +223,7 @@ public class CardSnapToSlot : MonoBehaviour
                 if (receiver != null) receiver.SetColliderActive(true);
             }
         }
-        if (MouseController.Instance != null) MouseController.Instance.SetMouseMode(MouseController.MouseMode.Normal);
+
         GameObject startPin = GameObject.Find("Tracking_StartPin");
         if (startPin != null) Destroy(startPin);
     }
