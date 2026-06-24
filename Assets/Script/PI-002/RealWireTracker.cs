@@ -57,6 +57,18 @@ public class RealWireTracker : MonoBehaviour
         return $"{p2} -> {p1} -> {me}";
     }
 
+    private void LateUpdate()
+    {
+        // 매 프레임마다 슬롯들의 최신 위치를 실시간으로 선에 반영합니다!
+        UpdateWirePositions();
+
+        // 선이 움직였으므로 마우스 조준용 콜라이더 뼈대도 실시간으로 리모델링합니다.
+        UpdateColliderTopology();
+    }
+
+
+
+
     private void UpdateWirePositions()
     {
         if (_startSlot == null || _endSlot == null || _lineRenderer == null) return;

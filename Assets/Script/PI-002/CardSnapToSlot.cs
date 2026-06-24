@@ -128,9 +128,25 @@ public class CardSnapToSlot : MonoBehaviour
     /// 🎯 [사상 대통합 핵심 함수] 
     /// 가상핀이 목적지 주소를 따와서 거꾸로 전해오면, 사령탑인 여기서 2개의 주소를 묶어 최종 선을 생성하고 전달합니다.
     /// </summary>
-    public void ReportTargetSlotDiscovered(WireSlot finalTargetSlot)
+    public bool ReportTargetSlotDiscovered(WireSlot finalTargetSlot)
     {
-        if (_myOriginSlot == null || finalTargetSlot == null) return;
+        if (_myOriginSlot == null || finalTargetSlot == null) return false;
+
+
+
+        // ====================================================================
+        // 🎯 [새로운 스크립트 협동] 배선 계약서 최종 사인 직전, 독립 검사기 가동!
+        // ====================================================================
+        if (!WireConnectionValidator.IsConnectionValid(_myOriginSlot, finalTargetSlot))
+        {
+            // 💥 [취소 안 한다!] 규칙에 맞지 않으면 강제 취소(ForceCancelRestore)를 호출하지 않고,
+            // 그냥 여기서 함수를 끝내버립니다. (가상핀과 가이드선이 파괴되지 않고 화면에 유지됨)
+            return false;
+        }
+
+
+
+
 
         // 1. 최종 실물 전선 오브젝트 인스턴스화 (CardSnapToSlot이 주도하여 생성)
         GameObject lineGroupObj = GameObject.Find("All_Line") ?? new GameObject("All_Line");
@@ -165,6 +181,8 @@ public class CardSnapToSlot : MonoBehaviour
 
         GameObject startPin = GameObject.Find("Tracking_StartPin");
         if (startPin != null) Destroy(startPin);
+
+        return true; // 합격 보고
     }
 
     private string GetDetailedPath(Transform trans)
