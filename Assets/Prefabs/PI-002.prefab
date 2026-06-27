@@ -128,9 +128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4653281126995676688}
   - component: {fileID: 7429301267869289213}
-  - component: {fileID: 1354329411316187204}
-  - component: {fileID: 4486309534013807124}
-  - component: {fileID: 7052039297873334588}
+  - component: {fileID: 4551526519052374927}
+  - component: {fileID: 7086047575811445054}
   m_Layer: 7
   m_Name: PI-002
   m_TagString: Card
@@ -212,7 +211,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &1354329411316187204
+--- !u!61 &4551526519052374927
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,21 +257,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4486309534013807124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604387473821051010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee67ea9975b92648bea56d641264a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardDragHandler
-  dragScaleMultiplier: 1.15
-  canvasScaleMultiplier: 1.15
---- !u!114 &7052039297873334588
+--- !u!114 &7086047575811445054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,6 +287,9 @@ GameObject:
   - component: {fileID: 3304229732415929117}
   - component: {fileID: 7812138955969312779}
   - component: {fileID: 2478352506998389347}
+  - component: {fileID: 998502289597213198}
+  - component: {fileID: 7535453969502267278}
+  - component: {fileID: 5816727726975302655}
   m_Layer: 5
   m_Name: PI-002
   m_TagString: TheCard
@@ -406,3 +394,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardController
   cardData: {fileID: 11400000, guid: 44c161d85d941024aa6ad5aae82d40a5, type: 2}
+--- !u!114 &998502289597213198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806693254195394915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bd0c8a88716ff4f9d091a46c31b0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardLayerController
+  originalSortingLayer: Default
+  currentOrderInLayer: 0
+--- !u!114 &7535453969502267278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806693254195394915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee67ea9975b92648bea56d641264a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardDragHandler
+  dragScaleMultiplier: 1.15
+  canvasScaleMultiplier: 1.15
+--- !u!114 &5816727726975302655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806693254195394915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b2500d92c6c314fb413900d010cafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardStackHandler
+  yOffsetDelta: -0.2
+  baseSortingOrder: 10
+  magnetSpeed: 12
+  childStack: []
