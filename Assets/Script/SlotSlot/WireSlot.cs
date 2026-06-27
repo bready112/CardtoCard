@@ -82,7 +82,7 @@ public class WireSlot : MonoBehaviour
         if (_currentActivePinVisual != null)
         {
             Vector3 pinLocalPos = _currentActivePinVisual.transform.localPosition;
-            pinLocalPos.z = -1f;
+            pinLocalPos.z = 0f;
             _currentActivePinVisual.transform.localPosition = pinLocalPos;
 
             _currentActivePinVisual.SetActive(true);

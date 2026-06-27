@@ -130,9 +130,13 @@ GameObject:
   - component: {fileID: 2038192343368624931}
   - component: {fileID: 516550806716694357}
   - component: {fileID: 1891093663660823229}
+  - component: {fileID: 2375373358607182031}
+  - component: {fileID: 18513096028733622}
+  - component: {fileID: 5832096428418831265}
+  - component: {fileID: 1042591189330554952}
   m_Layer: 5
   m_Name: Card-0000
-  m_TagString: Untagged
+  m_TagString: TheCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,11 +156,11 @@ RectTransform:
   - {fileID: 4911185619324944462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 346, y: 1347}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 120}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2038192343368624931
 Canvas:
   m_ObjectHideFlags: 0
@@ -221,6 +225,63 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2375373358607182031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349557730107253491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bf06185bac8f848bbcc2375875d659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardController
+  cardData: {fileID: 11400000, guid: 60373e122bd78684ba4ba7127c84a332, type: 2}
+--- !u!114 &18513096028733622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349557730107253491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b2500d92c6c314fb413900d010cafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardStackHandler
+  yOffsetDelta: -0.2
+  baseSortingOrder: 10
+  magnetSpeed: 12
+  childStack: []
+--- !u!114 &5832096428418831265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349557730107253491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee67ea9975b92648bea56d641264a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardDragHandler
+  dragScaleMultiplier: 1.15
+  canvasScaleMultiplier: 1.15
+--- !u!114 &1042591189330554952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349557730107253491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bd0c8a88716ff4f9d091a46c31b0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardLayerController
+  originalSortingLayer: Default
+  currentOrderInLayer: 0
 --- !u!1 &5679770478052779049
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,10 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8456755721156283125}
   - component: {fileID: 2126843598983157769}
-  - component: {fileID: 903593552363246730}
-  - component: {fileID: 6363352319626826792}
-  - component: {fileID: 4465508083560770880}
-  - component: {fileID: 8642858877834867225}
+  - component: {fileID: 7199261304146819749}
   m_Layer: 7
   m_Name: Card-0000
   m_TagString: Card
@@ -316,34 +374,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &903593552363246730
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5679770478052779049}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &6363352319626826792
+--- !u!61 &7199261304146819749
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,31 +420,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4465508083560770880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5679770478052779049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62bf06185bac8f848bbcc2375875d659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardController
-  cardData: {fileID: 0}
---- !u!114 &8642858877834867225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5679770478052779049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92c4554fa9287243b024417f094155f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NormalCardDragHandler
-  dragScaleMultiplier: 1.15
-  _spriteRenderer: {fileID: 0}
-  _originalSortingOrder: 0

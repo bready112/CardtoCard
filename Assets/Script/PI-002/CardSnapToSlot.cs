@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// 💥 이제 이 코드는 최상위 "부모1 (TheCard Canvas)" 오브젝트에 직접 붙입니다!
 public class CardSnapToSlot : MonoBehaviour
 {
     [Header("📌 마우스를 따라갈 가상 EndPin 프리팹 (태그: Clickup)")]
@@ -25,16 +26,18 @@ public class CardSnapToSlot : MonoBehaviour
 
     private void Awake()
     {
-        _dragHandler = GetComponentInParent<CardDragHandler>() ?? GetComponent<CardDragHandler>();
+        _dragHandler = GetComponent<CardDragHandler>() ?? GetComponentInParent<CardDragHandler>();
+
+        // 🎯 [부모방 이사 반영]: 내 방 자체가 바로 최상위 캔버스 오브젝트가 됩니다!
+        _myCanvasObject = this.gameObject;
     }
 
     private void OnMouseUp()
     {
-        // 💥 Z축 기본 평면(0f) 기준으로 마우스 월드 좌표 계산 (카메라 기본 거리 10f 적용)
+        // Z축 기본 평면(0f) 기준으로 마우스 월드 좌표 계산
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.InputSystem.Mouse.current.position.ReadValue().x, UnityEngine.InputSystem.Mouse.current.position.ReadValue().y, 10f));
-        mouseWorldPos.z = 0f; // 완전 평면화
+        mouseWorldPos.z = 0f;
 
-        // 원형 그물망 탐지 가동
         Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(mouseWorldPos, 0.5f);
         WireSlot targetSlot = null;
 
@@ -53,70 +56,57 @@ public class CardSnapToSlot : MonoBehaviour
 
         if (targetSlot != null)
         {
-            Transform myCanvas = CardHierarchyNavigator.GetCanvasRoot(transform);
-            if (myCanvas != null)
+            CardController cardController = GetComponent<CardController>() ?? GetComponentInChildren<CardController>();
+
+            if (cardController != null && cardController.cardData != null)
             {
-                _myCanvasObject = myCanvas.gameObject;
-                CardController cardController = myCanvas.GetComponent<CardController>() ?? GetComponentInParent<CardController>();
+                _actualCardID = cardController.cardData.id;
+            }
+            else
+            {
+                _actualCardID = _myCanvasObject.name.Split('_')[0];
+            }
 
-                if (cardController != null && cardController.cardData != null)
+            _myOriginSlot = targetSlot;
+            _myOriginSlot.LinkMasterCardCanvas(_myCanvasObject);
+            _myOriginSlot.isOccupied = true;
+
+            GameObject temBucket = GameObject.Find("Tem") ?? new GameObject("Tem");
+
+            // 💥 [핵심 보완]: 런타임에 인스턴스화된 내 고유 StartPin의 주소를 명확히 보관합니다.
+            GameObject sPinObj = null;
+            if (startPinPrefab != null)
+            {
+                Vector3 startPinPos = _myOriginSlot.transform.position;
+                startPinPos.z = 0f;
+                sPinObj = Instantiate(startPinPrefab, startPinPos, Quaternion.identity);
+                sPinObj.name = "Tracking_StartPin";
+                sPinObj.transform.SetParent(temBucket.transform, true);
+            }
+
+            if (endPinPrefab != null)
+            {
+                Vector3 endPinPos = _myOriginSlot.transform.position;
+                endPinPos.z = 0f;
+                GameObject ePinObj = Instantiate(endPinPrefab, endPinPos, Quaternion.identity);
+                ePinObj.transform.SetParent(temBucket.transform, true);
+
+                EndPin endPinScript = ePinObj.GetComponent<EndPin>();
+                if (endPinScript != null)
                 {
-                    _actualCardID = cardController.cardData.id;
-                }
-                else
-                {
-                    _actualCardID = myCanvas.name.Split('_')[0];
-                }
-
-                _myOriginSlot = targetSlot;
-                _myOriginSlot.LinkMasterCardCanvas(_myCanvasObject);
-                _myOriginSlot.isOccupied = true;
-
-                GameObject temBucket = GameObject.Find("Tem") ?? new GameObject("Tem");
-                if (startPinPrefab != null)
-                {
-                    // 💥 Z축을 0f로 꼽아줍니다.
-                    Vector3 startPinPos = _myOriginSlot.transform.position;
-                    startPinPos.z = 0f;
-                    GameObject sPinObj = Instantiate(startPinPrefab, startPinPos, Quaternion.identity);
-                    sPinObj.name = "Tracking_StartPin";
-                    sPinObj.transform.SetParent(temBucket.transform, true);
-                }
-
-                if (endPinPrefab != null)
-                {
-                    // 💥 Z축을 0f로 꼽아줍니다.
-                    Vector3 endPinPos = _myOriginSlot.transform.position;
-                    endPinPos.z = 0f;
-                    GameObject ePinObj = Instantiate(endPinPrefab, endPinPos, Quaternion.identity);
-                    ePinObj.transform.SetParent(temBucket.transform, true);
-
-                    EndPin endPinScript = ePinObj.GetComponent<EndPin>();
-                    if (endPinScript != null)
-                    {
-                        endPinScript.InitPureTracker(this);
-                    }
-                }
-
-  
-
-                CardColliderReceiver receiver = GetComponentInChildren<CardColliderReceiver>();
-                if (receiver != null)
-                {
-                    receiver.SetColliderActive(false);
-                }
-
-                
-
-                if (transform.parent != null && transform.parent.parent != null)
-                {
-                    transform.parent.parent.gameObject.SetActive(false);
-                }
-                else
-                {
-                    gameObject.SetActive(false);
+                    // 🎯 [정석 주소 바인딩]: 내 사령탑 주소(this)와 함께, 내 쌍둥이 핀(sPinObj) 주소를 다이렉트로 주입합니다!
+                    endPinScript.InitPureTracker(this, sPinObj);
                 }
             }
+
+            CardColliderReceiver receiver = GetComponentInChildren<CardColliderReceiver>();
+            if (receiver != null)
+            {
+                receiver.SetColliderActive(false);
+            }
+
+            // 🎯 [구조 정리]: 복잡한 네비게이터 문장을 전부 지우고 본인방을 즉시 숨깁니다!
+            _myCanvasObject.SetActive(false);
         }
     }
 
@@ -129,10 +119,6 @@ public class CardSnapToSlot : MonoBehaviour
             return false;
         }
 
-        // ====================================================================
-        // 🧲 [완공 구역 안전장치]: 최종 조준된 슬롯 평면을 그물망 탐지로 재차 안전 검사합니다.
-        // 부모 카드가 완공 연출 순간 몸통 콜라이더로 덮어버려도 완전히 무시합니다.
-        // ====================================================================
         Vector3 targetPos = finalTargetSlot.transform.position;
         targetPos.z = 0f;
 
@@ -148,7 +134,6 @@ public class CardSnapToSlot : MonoBehaviour
             }
         }
 
-        // 만약 비정상적인 프레임 꼬임으로 슬롯 인지가 풀렸더라도 강제 복원 판정을 먹입니다.
         if (!isSlotStillValid)
         {
             Debug.LogWarning($"⚠️ [공사 보정] {finalTargetSlot.name}이 물리 몸통에 가려졌으나 그물망 연산으로 관통 수거했습니다.");
@@ -156,7 +141,6 @@ public class CardSnapToSlot : MonoBehaviour
 
         GameObject lineGroupObj = GameObject.Find("All_Line") ?? new GameObject("All_Line");
 
-        // 💥 실물 전선 인스턴스도 Z = 0f 평면에 소환
         GameObject realWireInstance = Instantiate(wireLinePrefab, Vector3.zero, Quaternion.identity);
         realWireInstance.transform.SetParent(lineGroupObj.transform, false);
 
@@ -174,7 +158,6 @@ public class CardSnapToSlot : MonoBehaviour
         _myOriginSlot.ConnectWire(finalTargetSlot.transform.position, wireLinePrefab, targetDetailPath, finalTargetSlot, realWireInstance);
         finalTargetSlot.ConnectWire(_myOriginSlot.transform.position, wireLinePrefab, originDetailPath, _myOriginSlot, realWireInstance);
 
-        // 확실하게 루트 계층에서 수신기를 탐색하여 고무줄 작동
         CardPhysicsReceiver myReceiver = _myOriginSlot.transform.root.GetComponent<CardPhysicsReceiver>();
         CardPhysicsReceiver targetReceiver = finalTargetSlot.transform.root.GetComponent<CardPhysicsReceiver>();
 
@@ -185,11 +168,6 @@ public class CardSnapToSlot : MonoBehaviour
         }
 
         Destroy(_myCanvasObject);
-
-
-        GameObject startPin = GameObject.Find("Tracking_StartPin");
-        if (startPin != null) Destroy(startPin);
-
         return true;
     }
 
@@ -202,7 +180,10 @@ public class CardSnapToSlot : MonoBehaviour
         return $"{p2}.{p1}.{me}";
     }
 
-    public void ForceCancelRestore(Vector3 currentMousePinPos)
+    /// <summary>
+    /// 🛠️ [정교한 취소 복구]: 내 기차 세트의 고유 StartPin을 넘겨받아 그것만 콕 집어 제거합니다.
+    /// </summary>
+    public void ForceCancelRestore(Vector3 currentMousePinPos, GameObject specificStartPin)
     {
         if (_myOriginSlot != null)
         {
@@ -210,7 +191,6 @@ public class CardSnapToSlot : MonoBehaviour
 
             if (_myCanvasObject != null)
             {
-                // 💥 카드 부활 시 Z축 원래대로 0f 안착
                 Vector3 spawnPos = currentMousePinPos;
                 spawnPos.z = 0f;
                 _myCanvasObject.transform.position = spawnPos;
@@ -224,7 +204,10 @@ public class CardSnapToSlot : MonoBehaviour
             }
         }
 
-        GameObject startPin = GameObject.Find("Tracking_StartPin");
-        if (startPin != null) Destroy(startPin);
+        // ❌ GameObject.Find를 삭제하고, 인자로 들어온 고유 핀만 즉시 폭파!
+        if (specificStartPin != null)
+        {
+            Destroy(specificStartPin);
+        }
     }
 }
