@@ -92,7 +92,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -155,4 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a408bd05d21df41a56fa5631894f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RealWireTracker
-  pinVisual: {fileID: 1088629053836057971, guid: b8dc57ac0cc9dce4daf003363fffc6af, type: 3}
+  wireWidthOffset: 100
+  pointSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  spriteScale: {x: 10, y: 20, z: 1}
+  spriteColor: {r: 0.19601583, g: 0.7735849, b: 0.104604095, a: 1}

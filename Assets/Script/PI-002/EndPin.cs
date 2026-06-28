@@ -29,21 +29,27 @@ public class EndPin : MonoBehaviour
         _isFirstFrameSpanned = true;
         _currentTimer = 0f;
 
+        // Validator에 적어두신 수치를 그대로 가져옵니다[cite: 19].
         _maxMouseDistance = WireConnectionValidator.MaxWireDistance;
 
         GameObject startPin = GameObject.Find("Tracking_StartPin");
-        if (startPin != null) _startPinPosition = startPin.transform.position;
-        else _startPinPosition = transform.position;
-
-        if (_tempLine != null)
+        if (startPin != null)
         {
-            _tempLine.enabled = true;
-            _tempLine.positionCount = 2;
-            _tempLine.startWidth = 0.05f;
-            _tempLine.endWidth = 0.05f;
-            _tempLine.material = new Material(Shader.Find("Sprites/Default"));
-            _tempLine.startColor = Color.white;
-            _tempLine.endColor = Color.white;
+            _startPinPosition = startPin.transform.position;
+            _startPinPosition.z = 0f;
+        }
+        else
+        {
+            _startPinPosition = owner.transform.position;
+            _startPinPosition.z = 0f;
+        }
+
+        WireChainLinker linker = GetComponent<WireChainLinker>() ?? gameObject.AddComponent<WireChainLinker>();
+        GameObject segPrefab = Resources.Load<GameObject>("RopeSegment");
+
+        if (startPin != null && segPrefab != null)
+        {
+            linker.LinkVirtualFirst(startPin.transform, this.transform, segPrefab);
         }
     }
 
@@ -58,10 +64,18 @@ public class EndPin : MonoBehaviour
             return;
         }
 
+        if (_startPinPosition == Vector3.zero)
+        {
+            GameObject startPin = GameObject.Find("Tracking_StartPin");
+            if (startPin != null) _startPinPosition = startPin.transform.position;
+        }
+
         if (Mouse.current != null)
         {
             Vector2 mouseWindowPos = Mouse.current.position.ReadValue();
-            Vector3 mouseWorldPos = _mainCamera.ScreenToWorldPoint(new Vector3(mouseWindowPos.x, mouseWindowPos.y, 10f));
+
+            float targetZ = Mathf.Abs(_mainCamera.transform.position.z);
+            Vector3 mouseWorldPos = _mainCamera.ScreenToWorldPoint(new Vector3(mouseWindowPos.x, mouseWindowPos.y, targetZ));
             mouseWorldPos.z = 0f;
 
             Vector3 fromStartToMouse = mouseWorldPos - _startPinPosition;
@@ -79,57 +93,46 @@ public class EndPin : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            if (_tempLine != null && _tempLine.enabled)
+            // ====================================================================
+            // 🎯 [버그 해결 핵심] EndPin이 일직선으로 그리기를 강탈하던 연산 완전 도려냄!
+            // ====================================================================
+            // 원래 있던 _tempLine.SetPosition(0/1) 구역을 완벽하게 삭제했습니다.
+            // 이제 연결 도중(드래그 중)에도 오직 WireChainLinker가 사슬 순서대로 선을 그립니다.
+            // ====================================================================
+
+            // 마우스 클릭 감지 및 완공/철거 분기
+            if (Mouse.current.leftButton.wasPressedThisFrame && !_isFirstFrameSpanned)
             {
-                _tempLine.SetPosition(0, _startPinPosition);
-                _tempLine.SetPosition(1, mouseWorldPos);
+                Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(mouseWorldPos, 0.5f);
+                WireSlot targetSlot = null;
+
+                foreach (var col in overlappedColliders)
+                {
+                    if (col != null && col.CompareTag("WirePin"))
+                    {
+                        WireSlot slotScript = col.GetComponent<WireSlot>();
+                        if (slotScript != null && !slotScript.isOccupied)
+                        {
+                            targetSlot = slotScript;
+                            break;
+                        }
+                    }
+                }
+
+                if (targetSlot != null)
+                {
+                    ProcessClickConnectionWithTarget(targetSlot);
+                }
+                else
+                {
+                    CancelAndReport();
+                }
             }
         }
 
         if (_isFirstFrameSpanned)
         {
             _isFirstFrameSpanned = false;
-            return;
-        }
-
-        // ====================================================================
-        // 🧲 [치트키 구역]: 마우스 클릭 시 유니티 OnMouse를 기만하고 
-        // 그물망 탐지(OverlapCircleAll)로 주변 슬롯을 강제로 낚아챕니다.
-        // ====================================================================
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            Vector2 mouseWindowPos = Mouse.current.position.ReadValue();
-            Vector3 mouseWorldPos = _mainCamera.ScreenToWorldPoint(new Vector3(mouseWindowPos.x, mouseWindowPos.y, 10f));
-            mouseWorldPos.z = 0f;
-
-            // 카드 몸통 콜라이더를 가볍게 무시하고, 내 주변 반지름 0.5f 안의 슬롯 싹 다 수거!
-            Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(mouseWorldPos, 0.5f);
-            WireSlot targetSlot = null;
-
-            foreach (var col in overlappedColliders)
-            {
-                if (col != null && col.CompareTag("WirePin"))
-                {
-                    WireSlot slotScript = col.GetComponent<WireSlot>();
-                    if (slotScript != null && !slotScript.isOccupied)
-                    {
-                        targetSlot = slotScript;
-                        break; // 유효한 슬롯을 찾았으므로 루프 탈출
-                    }
-                }
-            }
-
-            // 주변에 진짜 슬롯 구멍이 걸려들었다면 다이렉트 완공 처리!
-            if (targetSlot != null)
-            {
-                Debug.Log($"🎯 [EndPin 치트키] 카드 방해를 뚫고 {targetSlot.gameObject.name} 슬롯 클릭 성공!");
-                ProcessClickConnectionWithTarget(targetSlot);
-            }
-            else
-            {
-                // 주변 반경에 슬롯이 아예 없는데 클릭한 거라면 허공 클릭이므로 가상선 취소
-                CancelAndReport();
-            }
         }
     }
 
@@ -137,26 +140,32 @@ public class EndPin : MonoBehaviour
     {
         if (finalTargetSlot == null || _ownerCommandCenter == null) return;
 
-        bool isSuccess = _ownerCommandCenter.ReportTargetSlotDiscovered(finalTargetSlot);
+        WireChainLinker linker = GetComponent<WireChainLinker>();
+        bool isSuccess = _ownerCommandCenter.ReportTargetSlotDiscovered(finalTargetSlot, linker);
 
         if (isSuccess)
         {
             _isTracking = false;
             Destroy(gameObject);
         }
-        else
-        {
-            Debug.LogWarning("⚠️ 규칙에 맞지 않는 슬롯이므로 연결을 보류하고 가상선을 유지합니다.");
-        }
     }
 
     private void CancelAndReport()
     {
         _isTracking = false;
+
+        GameObject wireStorage = GameObject.Find("Wire_Temp_Storage");
+        if (wireStorage != null)
+        {
+            Debug.Log("🔌 [철거 완료] 가상 전선 바구니(Wire_Temp_Storage) 오브젝트 파괴 완료.");
+            Destroy(wireStorage);
+        }
+
         if (_ownerCommandCenter != null)
         {
             _ownerCommandCenter.ForceCancelRestore(transform.position);
         }
+
         Destroy(gameObject);
     }
 }

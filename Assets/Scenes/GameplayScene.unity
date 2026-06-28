@@ -639,6 +639,14 @@ PrefabInstance:
       propertyPath: m_LinearDamping
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3941285209418771840, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1090.6849
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941285209418771840, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 437.04483
+      objectReference: {fileID: 0}
     - target: {fileID: 4458395465936268316, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_Name
       value: C-001 (1)
@@ -663,13 +671,33 @@ PrefabInstance:
       propertyPath: m_Frequency
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7130368770909105121, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1023.58057
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130368770909105121, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 369.18826
+      objectReference: {fileID: 0}
     - target: {fileID: 7907965832799407132, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7986294373287178538, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_Distance
+      value: 1088.1255
+      objectReference: {fileID: 0}
     - target: {fileID: 8657107311797681276, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_Distance
       value: 1088.1255
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690911493832833341, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1090.6849
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690911493832833341, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 437.04483
       objectReference: {fileID: 0}
     - target: {fileID: 8773554472852665517, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_Distance
@@ -5230,6 +5258,10 @@ PrefabInstance:
       value: C-001
       objectReference: {fileID: 0}
     - target: {fileID: 6067318460191095393, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067318460191095393, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_LinearDamping
       value: 3
       objectReference: {fileID: 0}
@@ -5249,6 +5281,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8035844811774114698, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+      propertyPath: m_Size.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8773554472852665517, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5263,6 +5299,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8285084286715364664, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+    - {fileID: 8035844811774114698, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+    - {fileID: 8773554472852665517, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+    - {fileID: 7130368770909105121, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
+    - {fileID: 3941285209418771840, guid: 2d2b7a65eb9bf3b498700d08b3c5f5d9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
